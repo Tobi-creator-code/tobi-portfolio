@@ -1,0 +1,228 @@
+.projects-preview,
+.get,
+.profile-page {
+    margin-top: 70px;
+}
+
+.projects-preview {
+    padding: 60px 80px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.88);
+    min-height: 80vh;
+}
+
+.projects-title {
+    font-family: Georgia;
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: rgb(3, 41, 83);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    padding-bottom: 20px;
+}
+
+.project-card.in-view:nth-child(1) { animation-delay: 0.1s; }
+.project-card.in-view:nth-child(2) { animation-delay: 0.25s; }
+.project-card.in-view:nth-child(3) { animation-delay: 0.4s; }
+.project-card.in-view:nth-child(4) { animation-delay: 0.55s; }
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: rgb(236, 236, 236);
+    display: block;
+}
+
+/* Shown in place of an <img> until a real project photo is added */
+.project-img-placeholder {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(3, 41, 83);
+    color: rgba(255, 255, 255, 0.85);
+    font-family: Verdana;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 0 16px;
+}
+
+.project-card h3 {
+    margin: 15px 15px 8px;
+    font-family: Georgia;
+    color: rgb(3, 41, 83);
+}
+
+.project-card p {
+    margin: 0 15px 10px;
+    font-size: 14px;
+    font-family: Verdana;
+}
+
+.project-card a {
+    color: brown;
+    text-decoration: none;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+.number, .no {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(3, 41, 83);
+}
+
+.get {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 0 24px;
+}
+
+.gets {
+    font-family: Georgia;
+    font-size: 28px;
+    color: rgb(3, 41, 83);
+    text-align: center;
+}
+
+/* PROFILE PAGE */
+.profile-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+    min-height: 70vh;
+    background-color: rgba(255, 255, 255, 0.88);
+    text-align: center;
+}
+
+.picture {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid rgb(3, 41, 83);
+    margin-bottom: 20px;
+}
+
+.profile-page h2 {
+    font-family: Georgia;
+    font-size: 24px;
+    color: rgb(3, 41, 83);
+    margin-bottom: 8px;
+}
+
+.profile-page p {
+    font-family: Verdana;
+    font-size: 15px;
+    color: #555;
+}
+
+.cta-cursor-alt {
+    background-color: rgb(3, 41, 83);
+    color: white;
+    margin-top: 12px;
+}
+
+.cta-cursor-alt:hover, .cta-cursor-alt:focus-visible {
+    background-color: rgb(5, 60, 120);
+}
+
+body.dark-mode .cta-cursor-alt {
+    background-color: rgb(140, 185, 255);
+    color: rgb(15, 15, 17);
+}
+
+body.dark-mode .cta-cursor-alt:hover,
+body.dark-mode .cta-cursor-alt:focus-visible {
+    background-color: rgb(180, 210, 255);
+}
+
+@media (max-width: 768px) {
+    .projects-preview, .profile-page {
+        padding: 40px 24px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-title { font-size: 22px; }
+
+    .picture {
+        width: 160px;
+        height: 160px;
+    }
+
+    .gets { font-size: 22px; }
+}
+
+/* ---------- Dark mode overrides ---------- */
+body.dark-mode .projects-preview,
+body.dark-mode .get,
+body.dark-mode .profile-page {
+    background-color: rgba(15, 15, 17, 0.88);
+}
+
+body.dark-mode .projects-title,
+body.dark-mode .gets,
+body.dark-mode .profile-page h2,
+body.dark-mode .number,
+body.dark-mode .no {
+    color: rgb(140, 185, 255);
+}
+
+body.dark-mode .profile-page p {
+    color: rgb(190, 190, 190);
+}
+
+body.dark-mode .project-card {
+    background-color: rgb(28, 28, 31);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .project-card h3 {
+    color: rgb(140, 185, 255);
+}
+
+body.dark-mode .project-card p {
+    color: rgb(210, 210, 210);
+}
+
+body.dark-mode .project-card a {
+    color: rgb(255, 175, 120);
+}
+
+body.dark-mode .picture {
+    border-color: rgb(140, 185, 255);
+}

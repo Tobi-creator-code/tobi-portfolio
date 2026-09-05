@@ -1,0 +1,133 @@
+/* =========================================================
+   Responsive overrides for tablet and phone.
+   styles/index.css holds the desktop-first base; everything
+   here only adjusts what needs to change on smaller screens.
+   ========================================================= */
+
+/* ---------- Tablet and below (≤ 768px) ---------- */
+@media (max-width: 768px) {
+
+    .logo { margin-left: 20px; }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .theme-toggle {
+        margin-right: 14px;
+    }
+
+    .sub {
+        margin-right: 0;
+        position: fixed;
+        top: 56px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        background-color: rgb(255, 255, 255);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        border-bottom: 1px solid rgb(224, 219, 219);
+    }
+
+    .sub.nav-open {
+        max-height: 320px;
+    }
+
+    .sub > * {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 14px 20px;
+        border-top: 1px solid rgb(240, 240, 240);
+    }
+
+    .sub .profile {
+        margin: 8px 20px;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        min-width: 0;
+        background-color: rgb(247, 247, 247);
+    }
+
+    .dropdown-menu a {
+        padding-left: 32px;
+    }
+
+    .remain {
+        height: 260px;
+        margin-top: 56px;
+    }
+
+    .abouts, .box, .tools-section {
+        padding: 40px 24px;
+    }
+
+    .box {
+        grid-template-columns: 1fr;
+    }
+
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cta-section {
+        padding: 50px 24px;
+    }
+}
+
+/* ---------- Phone (≤ 480px) ---------- */
+@media (max-width: 480px) {
+
+    h1 { font-size: 22px; }
+
+    .logo {
+        height: 30px;
+        width: 30px;
+        margin-left: 12px;
+    }
+
+    .tobi h1 { font-size: 18px; }
+
+    .remain {
+        height: 190px;
+    }
+
+    .abouts, .box, .tools-section {
+        padding: 30px 16px;
+    }
+
+    .about, .tools-title { font-size: 20px; }
+
+    .composition { font-size: 14px; line-height: 1.7; }
+
+    .beg { font-size: 18px; }
+
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-text { font-size: 22px; }
+
+    .cta-cursor {
+        padding: 12px 30px;
+    }
+
+    .to-top {
+        right: 14px;
+        bottom: 14px;
+        height: 40px;
+        width: 40px;
+    }
+}
